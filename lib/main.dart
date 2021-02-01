@@ -98,7 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                   SizedBox(height: 5),
                                   Text(
-                                    getdate(st.createOn.toString()),
+                                    // getdate(st.createOn.toString()),
+                                    st.createOn.toString(),
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12,
