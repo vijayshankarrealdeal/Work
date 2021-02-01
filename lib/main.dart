@@ -53,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print(1213456431);
     final api = Provider.of<APi>(context, listen: false);
     return Scaffold(
       backgroundColor: CupertinoColors.darkBackgroundGray,
@@ -64,9 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: RefreshIndicator(
         // ignore: missing_return
         onRefresh: () {
-          api.toggle();
           api.getDataFrom(xLimit);
-          api.toggle();
         },
         child: Container(
           child: Consumer<APi>(
@@ -98,8 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                   SizedBox(height: 5),
                                   Text(
-                                    // getdate(st.createOn.toString()),
-                                    st.createOn.toString(),
+                                    getdate(st.createOn.toString()),
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12,

@@ -22,9 +22,9 @@ class APi extends ChangeNotifier {
         "http://playonnuat-env.eba-ernpdw3w.ap-south-1.elasticbeanstalk.com/api/v1/establishment/test/list?offset=0&limit=$limit";
 
     final responseData = await http.get(url);
-    print(1);
+
     toggle();
-    print(2);
+
     if (responseData.statusCode == 200) {
       _data = _modelSegmentFromJson(responseData.body);
       print('called');
